@@ -12,6 +12,8 @@ fetchPromise.then((res) => {
 }).then((biodatas) => {
   //Append all user biodatas to main element
   main.innerHTML = listOfBiodatas(biodatas)
+}).catch((err) => {
+  main.innerHTML = err
 })
 
 //List all users from JSON Placeholder
